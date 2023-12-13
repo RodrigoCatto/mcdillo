@@ -1,0 +1,33 @@
+version: "1.0"
+services:
+  # Base image containing dependencies.
+  base:
+    image: galactic-desktop-l4t-r35.3.1:base
+    name: mcdillo_galactic
+    # Interactive shell
+    stdin_open: true
+    tty: true
+    # Networking and IPC for ROS 2
+    network_mode: host
+    ipc: host
+    # Needed to display graphical applications
+    privileged: true
+    environment:
+      # Allows graphical programs in the container.
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+      - NVIDIA_DRIVER_CAPABILITIES=all
+ 
+  # Overlay image containing the example source code.
+  overlay:
+    extends: base
+    image: mcdillo_ws:overlay
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: overlay
+ 
+  # Demo world
+  demo-world:
+    extends: overlay
+    command: ros2 launch tb3_worlds tb3_demo_world.launch.py
