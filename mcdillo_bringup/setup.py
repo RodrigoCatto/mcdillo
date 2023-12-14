@@ -10,6 +10,8 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name, ['launch/ydlidar_launch.py']),
+        ('share/' + package_name, ['params/X4.yaml']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
