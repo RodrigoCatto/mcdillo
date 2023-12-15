@@ -1,6 +1,6 @@
 #!/bin/bash
 # Basic entrypoint for ROS / Colcon Docker containers
-export ROS_DISTRO=galactic
+export ROS_DISTRO=humble
 export ROS_DOMAIN_ID=32
 
 # Source ROS 2
