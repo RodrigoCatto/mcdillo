@@ -19,6 +19,7 @@ RUN git clone https://github.com/YDLIDAR/YDLidar-SDK.git \
 RUN mkdir -p /mcdillo_ws/src
 WORKDIR /mcdillo_ws
 COPY ./mcdillo_bringup/ ./src/mcdillo_bringup/
+COPY ./mcdillo_mapping/ ./src/mcdillo_mapping/
 COPY ./ydlidar_ros2_driver/ ./src/ydlidar_ros2_driver/
 
 # Intall Foxglove and Irobot custom messages
