@@ -14,7 +14,7 @@ git clone --recursive https://github.com/RodrigoCatto/mcdillo.git src
 2. Build the Docker Container\
 ```docker build -f docker/Dockerfile -t mcdillo_ws . ```
 
-3. Run the Conteiner\
+3. Run the Container\
 ```docker run -it --net=host --ipc=host --privileged -v /dev/ydlidar:/dev/ydlidar -e DISPLAY=$DISPLAY mcdillo_ws```
 
 4. Mcdillo Keyboard Teleop\
