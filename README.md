@@ -1,6 +1,13 @@
 # mcdillo
 IRobot Create 3 repo using Jetson Nano
 
+Clone the repository:
+```
+mkdir mcdillo_ws
+cd mcdillo_ws
+git clone --recursive https://github.com/RodrigoCatto/mcdillo.git src
+```
+
 1. Build the Docker Container\
 ```docker build -f docker/Dockerfile -t mcdillo_ws . ```
 
