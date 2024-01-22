@@ -1,6 +1,9 @@
 # mcdillo
 IRobot Create 3 repo using Jetson Nano
 
+<img src="https://raw.githubusercontent.com/RodrigoCatto/mcdillo/dev/media/mcdillo_render_front.png" width="40%">
+
+
 Clone the repository:
 ```
 mkdir mcdillo_ws
